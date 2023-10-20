@@ -22,7 +22,7 @@ Throwable(float initXpos, float initYpos,float initSize, boolean initisRock){
 }
 
 void display(){
-  if(onScreen){
+  if(alive){
   pushMatrix();
   rectMode(CENTER);
   translate(int(xpos), int(ypos));
