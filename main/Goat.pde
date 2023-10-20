@@ -73,7 +73,7 @@ class Goat {
   float getGoatY() {
     return yPosGoat - 20 * goatSize;
   }
-  float getGoatRight() {s
+  float getGoatRight() {
     return xPosGoat + 150 * goatSize;
   }
   int getLives() {
