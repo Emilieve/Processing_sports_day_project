@@ -53,7 +53,7 @@ class Throwable {
     yVelocity -= gravity;
   }
   
-  boolean collision(float goatXleft, float goatrightX, float goatY){
+  boolean collision(int goatXleft, int goatrightX, int goatY){
     if(goatXleft > xpos +75 || xpos - 90 > goatrightX || ypos + 50 < goatY){
       return false;
     }

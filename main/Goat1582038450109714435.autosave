@@ -3,8 +3,7 @@ class Goat {
   float xPosGoat = 0;
   float yPosGoat = 0;
   float goatSize = 0;
-  float goatSpeed = 5;
-  float chasePoint = 0;
+  float goatSpeed = 2;
   //booleans
   boolean goatHit = false;
   //ints
@@ -12,12 +11,12 @@ class Goat {
   int counter = 0;
   //constructor
   Goat(float initX, float initY, float initSize) {
-    xPosGoat = initX - 200;
-    yPosGoat = initY - 220;
+    xPosGoat = initX;
+    yPosGoat = initY;
     goatSize = initSize;
   }
   //draw the thing
-  void display(int mountaineerX) {
+  void display() {
     float gS = goatSize;
     noStroke();
     //hooves
@@ -49,35 +48,33 @@ class Goat {
     circle(xPosGoat, yPosGoat, 20 * gS);
     fill(#000000);
     rect(xPosGoat - 6 * gS, yPosGoat - 2 * gS, 11 * gS, 5 * gS);
-    moveNormal(mountaineerX);
+    moveNormal(0);
   }
 
   void moveNormal(float xPosChase) {
-    chasePoint = xPosChase;
+
     if (xPosGoat > xPosChase + 40 * goatSize) {
       xPosGoat = xPosGoat - goatSpeed;
     }
   }
   void moveBack() {
+    //    if (xPosGoat - 'number' * gS <= xposthrowable() && yposthrowable <= yPosGoat + 'number' * gS ) {
+    //    goatHit = true;
+    //    }
     goatHit = true;
-    //if (xPosGoat >= chasePoint + 40 * goatSize) {
-    //  goatHit = true;
-    //} else {
-    //  goatHit = false;
-    //}
     if (goatHit == true) {
-      xPosGoat = xPosGoat + 100 * goatSize;
+      xPosGoat = xPosGoat + 50 * goatSize;
     }
   }
-  
-  float getGoatLeft() {
-    return xPosGoat - 60 * goatSize;
+//
+  int getGoatLeft() {
+    return int(xPosGoat - 60 * goatSize);
   }
-  float getGoatY() {
-    return yPosGoat - 20 * goatSize;
+  int getGoatY() {
+    return int(yPosGoat - 20 * goatSize);
   }
-  float getGoatRight() {
-    return xPosGoat + 150 * goatSize;
+  int getGoatRight() {
+    return int(xPosGoat + 150 * goatSize);
   }
   int getLives() {
     return life;
