@@ -4,13 +4,13 @@ PImage imgPunching;
 class Mountaineer {
   int xPosStart = 200;
   int x;
-  int imageWidth = 250;
-  int imageHeight = 250;
+  int imageWidth = 350;
+  int imageHeight = 350;
   
   Mountaineer(){
     imgNeutral = loadImage("../images/mountaineer_neutral.png");
-    imgNeutral.resiresize(imageWidth,imageHeight)  
-    imgPunching = loadImage("../images/mountaineer_punching.png");
+    imgNeutral.resize(imageWidth,imageHeight);
+    //imgPunching = loadImage("../images/mountaineer_punching.png");
     this.x = xPosStart;
   }
   
