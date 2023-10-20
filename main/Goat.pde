@@ -49,7 +49,6 @@ class Goat {
     fill(#000000);
     rect(xPosGoat - 6 * gS, yPosGoat - 2 * gS, 11 * gS, 5 * gS);
     moveNormal(0);
-    print(counter);
   }
 
   void moveNormal(float xPosChase) {
@@ -57,15 +56,19 @@ class Goat {
     if (xPosGoat > xPosChase + 40 * goatSize) {
       xPosGoat = xPosGoat - goatSpeed;
     }
- 
   }
   void moveBack() {
+//    if (xPosGoat - 'number' * gS <= xposthrowable() && yposthrowable <= yPosGoat + 'number' * gS ) {
+//    goatHit = true;
+//    }
     goatHit = true;
     if (goatHit == true) {
       xPosGoat = xPosGoat + 50 * goatSize;
     }
   }
-
+  float getGoatX() {
+    return xPosGoat;
+  }
   int getLives() {
     return lives;
   }
