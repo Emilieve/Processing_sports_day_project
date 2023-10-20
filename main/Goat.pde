@@ -11,12 +11,12 @@ class Goat {
   int counter = 0;
   //constructor
   Goat(float initX, float initY, float initSize) {
-    xPosGoat = initX;
-    yPosGoat = initY;
+    xPosGoat = initX - 200;
+    yPosGoat = initY - 220;
     goatSize = initSize;
   }
   //draw the thing
-  void display() {
+  void display(int mountaineerX) {
     float gS = goatSize;
     noStroke();
     //hooves
@@ -48,7 +48,7 @@ class Goat {
     circle(xPosGoat, yPosGoat, 20 * gS);
     fill(#000000);
     rect(xPosGoat - 6 * gS, yPosGoat - 2 * gS, 11 * gS, 5 * gS);
-    moveNormal(0);
+    moveNormal(mountaineerX);
   }
 
   void moveNormal(float xPosChase) {
