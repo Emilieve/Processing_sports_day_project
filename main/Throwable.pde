@@ -17,8 +17,8 @@ class Throwable {
     xVelocity = 4;
     yVelocity = 2.5;
     swirlAngle = 0;
-    gravity = 0.02;
-    alive = true;
+    gravity = 0.05;
+    alive = false;
   }
   
   void display(){
@@ -46,15 +46,16 @@ class Throwable {
     }
   }
   
-  void update(){
+  void update(int maxX, int maxY){
     xpos += xVelocity;
     ypos -= yVelocity;
     xVelocity = xVelocity*3000/3001;
     yVelocity -= gravity;
+    if(xpos > maxX || ypos > maxY) alive = false;
   }
   
   boolean collision(float goatXleft, float goatrightX, float goatY){
-    if(goatXleft > xpos +75 || xpos - 90 > goatrightX || ypos + 50 < goatY){
+    if(goatXleft > xpos -75 || xpos + 90 > goatrightX || ypos - 50 < goatY){
       return false;
     }
     return true;
@@ -67,7 +68,7 @@ class Throwable {
       ypos = y;
       swirlAngle = 0;
       xVelocity = 4;
-      yVelocity = 2.5;
+      yVelocity = 1;
     }
   }
 }

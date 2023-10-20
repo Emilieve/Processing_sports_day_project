@@ -1,3 +1,6 @@
+import processing.sound.*;
+SoundFile file;
+
 class Structure {
   Mountaineer mountaineer;
   Goat goat;
@@ -6,6 +9,7 @@ class Structure {
     this.mountaineer=mountaineer;
     this.goat=goat;
     this.throwable=throwable;
+    //file = new SoundFile(this, "../sounds/punch.mp3");
   }
 
   void update() {
@@ -25,7 +29,9 @@ class Structure {
       mountaineer.move("left");
     } else if (input=='D'||input=='d') {    //press D or d move right
       mountaineer.move("right");
-    } else if (input=='Q'||input=='q') {    //press Q or q througnt something
+    } else if (input=='Q'||input=='q') {  
+      throwable.spawn(mountaineer.topRightX, mountaineer.topRightY);
+      //press Q or q througnt something
       //mountaineer through rock
     } else if (input=='E'||input=='e') { 
         mountaineer.punch();

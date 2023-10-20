@@ -25,7 +25,7 @@ class Mountaineer {
     imgPunching.resize(imageWidth,imageHeight);
     this.x = xPosStart;
     this.topRightX = this.x + imageWidth;
-    this.topRightY = imageHeight;
+    this.topRightY = 1080-imageHeight;
     this.life = 100;
   }
   

@@ -14,19 +14,23 @@ void setup(){
   healthbar = new HealthBar(600,30);
   throwable = new Throwable(width*3/4, height*3/4, 1, false);
   structure = new Structure(mountaineer,goat,throwable);
+  
+  
+  
 }
 
 void draw(){
   background.display();
 
   throwable.display();
-  throwable.update();
+  throwable.update(width, height);
   mountaineer.display();
   goat.display(mountaineer.topRightX);
      //mountaineer.life,goat.life)
   structure.update();
   if(throwable.collision(goat.getGoatRight(), goat.getGoatLeft(), goat.getGoatY())){ //Projectile hits goat
     throwable.alive = false;
+    goat.life-=10;
     
   }
   print(goat.life);
