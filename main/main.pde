@@ -12,7 +12,7 @@ void setup(){
   background = new Background();
   goat = new Goat(100,100,1.0);
   healthbar = new HealthBar(600,30);
-  throwable = new Throwable(width*3/4, height*3/4, 100, false);
+  throwable = new Throwable(width*3/4, height*3/4, 1, false);
   structure = new Structure(mountaineer,goat,throwable);
 }
 
