@@ -49,6 +49,7 @@ class Goat {
     fill(#000000);
     rect(xPosGoat - 6 * gS, yPosGoat - 2 * gS, 11 * gS, 5 * gS);
     moveNormal(0);
+    print(counter);
   }
 
   void moveNormal(float xPosChase) {
@@ -56,16 +57,15 @@ class Goat {
     if (xPosGoat > xPosChase + 40 * goatSize) {
       xPosGoat = xPosGoat - goatSpeed;
     }
+ 
   }
   void moveBack() {
-    //    if (xPosGoat - 'number' * gS <= xposthrowable() && yposthrowable <= yPosGoat + 'number' * gS ) {
-    //    goatHit = true;
-    //    }
     goatHit = true;
     if (goatHit == true) {
       xPosGoat = xPosGoat + 50 * goatSize;
     }
   }
+<<<<<<< HEAD
 //
   float getGoatLeft() {
     return xPosGoat - 60 * goatSize;
@@ -76,6 +76,9 @@ class Goat {
   float getGoatRight() {
     return xPosGoat + 150 * goatSize;
   }
+=======
+
+>>>>>>> parent of fcd9c41 (Merge branch 'main' of https://github.com/Emilieve/Processing_sports_day_project)
   int getLives() {
     return life;
   }
