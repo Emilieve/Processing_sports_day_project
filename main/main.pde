@@ -30,3 +30,7 @@ void mouseClicked(){
 void keyPressed(){
   structure.keyPressEvent(key);
 }
+
+void collisionCheck(){
+  
+}
