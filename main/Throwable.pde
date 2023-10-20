@@ -31,6 +31,5 @@ void display(){
 void update(){
   xpos += velocity*cos(angle);
   ypos += velocity*sin(angle);
-  
 }
 }
