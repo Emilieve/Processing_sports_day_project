@@ -7,7 +7,7 @@ class Goat {
   //booleans
   boolean goatHit = false;
   //ints
-  int lives = 100;
+  int life = 100;
   int counter = 0;
   //constructor
   Goat(float initX, float initY, float initSize) {
@@ -77,6 +77,6 @@ class Goat {
     return xPosGoat + 150 * goatSize;
   }
   int getLives() {
-    return lives;
+    return life;
   }
 }
