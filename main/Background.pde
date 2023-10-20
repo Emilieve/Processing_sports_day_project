@@ -1,7 +1,7 @@
 class Background {
   Background() {
     // Load the background image
-    backgroundImage = loadImage("background.png");
+    backgroundImage = loadImage("../images/background.png");
   }
   void display() {
     // Display the background image
