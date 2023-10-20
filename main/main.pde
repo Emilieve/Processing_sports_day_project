@@ -22,7 +22,7 @@ void draw(){
   throwable.display();
   throwable.update();
   mountaineer.display();
-  healthbar.diaplay(100,100);    //mountaineer.life,goat.life)
+  healthbar.diaplay(mountaineer.life,goat.life);    //mountaineer.life,goat.life)
   structure.update();
 }
 void mouseClicked(){
