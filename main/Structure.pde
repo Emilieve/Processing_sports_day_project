@@ -9,8 +9,8 @@ class Structure {
   }
 
   void update() {
-    if (mountaineer.x+mountaineer.imageWidth/2>goat.getGoatLeft()) {
-      //mountaineer.life-=5;
+    if (mountaineer.topRightX>goat.getGoatLeft()) {
+      mountaineer.life-=5;
     }
     if (mountaineer.life<0) {
       textSize(128);
