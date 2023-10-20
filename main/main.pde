@@ -29,6 +29,7 @@ void draw() {
     throwable.alive = false;
   }
   background.sun();
+  goat.timer();
   healthbar.diaplay(mountaineer.life,goat.life); 
 }
 

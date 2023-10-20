@@ -9,7 +9,7 @@ class Structure {
   }
 
   void update() {
-    if (mountaineer.topRightX<=goat.getGoatLeft() && goat.goatAttack == true) {
+    if (mountaineer.topRightX>=goat.getGoatLeft()&& goat.goatAttack == true ) {//&& goat.goatAttack == true
       mountaineer.life-=5;
       mountaineer.topRightX-=5;
     }
