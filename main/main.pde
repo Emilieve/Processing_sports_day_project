@@ -4,9 +4,11 @@ Background background;
 Goat goat;
 HealthBar healthbar;
 Throwable throwable;
+Structure structure;
 
 void setup(){
   fullScreen();
+  structure = new Structure();
   mountaineer = new Mountaineer();
   background = new Background();
   goat = new Goat(100,100,1.0);
@@ -23,6 +25,8 @@ void draw(){
   healthbar.diaplay(100,100);    //mountaineer.life,goat.life)
 }
 void mouseClicked(){
+  structure.mousePressEvent();
 }
 void keyPressed(){
+  structure.keyPressEvent(key);
 }
