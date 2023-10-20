@@ -15,9 +15,6 @@ class Mountaineer {
   int topRightY;
   int life;
   
-
-  
-  
   Mountaineer(){
     imgNeutral = loadImage("../images/mountaineer_neutral.png");
     imgNeutral.resize(imageWidth,imageHeight);
@@ -42,8 +39,6 @@ class Mountaineer {
      imageToDisplay = imgNeutral;
    }
    image(imageToDisplay, this.x, height-imageHeight);
-   
-   circle (this.topRightX, height-imageHeight, 10);
    
    this.topRightX = this.x + imageWidth;
   }
