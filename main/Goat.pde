@@ -67,6 +67,7 @@ class Goat {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 //
   float getGoatLeft() {
     return xPosGoat - 60 * goatSize;
@@ -77,6 +78,9 @@ class Goat {
   float getGoatRight() {
     return xPosGoat + 150 * goatSize;
   }
+=======
+
+>>>>>>> parent of fcd9c41 (Merge branch 'main' of https://github.com/Emilieve/Processing_sports_day_project)
 =======
 
 >>>>>>> parent of fcd9c41 (Merge branch 'main' of https://github.com/Emilieve/Processing_sports_day_project)
