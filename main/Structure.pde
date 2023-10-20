@@ -9,13 +9,13 @@ class Structure {
   }
 
   void update() {
-    if (mountaineer.x+mountaineer.imageWidth/2+15>goat.getGoatLeft()) {
-      mountaineer.life-=5;
+    if (mountaineer.x+mountaineer.imageWidth/2>goat.getGoatLeft()) {
+      //mountaineer.life-=5;
     }
     if (mountaineer.life<0) {
       textSize(128);
       fill(#f72a1b);
-      text("mountaineer dead", width/2, height/2);
+      text("mountaineer dead", 0, height/2);
     }
   }
 
