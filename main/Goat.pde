@@ -58,16 +58,23 @@ class Goat {
     }
   }
   void moveBack() {
-//    if (xPosGoat - 'number' * gS <= xposthrowable() && yposthrowable <= yPosGoat + 'number' * gS ) {
-//    goatHit = true;
-//    }
+    //    if (xPosGoat - 'number' * gS <= xposthrowable() && yposthrowable <= yPosGoat + 'number' * gS ) {
+    //    goatHit = true;
+    //    }
     goatHit = true;
     if (goatHit == true) {
       xPosGoat = xPosGoat + 50 * goatSize;
     }
   }
-  float getGoatX() {
-    return xPosGoat;
+
+  float getGoatLeft() {
+    return xPosGoat - 60 * goatSize;
+  }
+  float getGoatY() {
+    return yPosGoat - 20 * goatSize;
+  }
+  float getGoatRight() {
+    return xPosGoat + 150 * goatSize;
   }
   int getLives() {
     return lives;
