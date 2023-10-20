@@ -29,7 +29,8 @@ void draw(){
     throwable.alive = false;
     
   }
-  print(goat.life);
+  goat.timer();
+  print();
   healthbar.diaplay(mountaineer.life,goat.life); 
 }
 
