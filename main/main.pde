@@ -27,8 +27,8 @@ void draw(){
   structure.update();
   if(throwable.collision(goat.getGoatRight(), goat.getGoatLeft(), goat.getGoatY())){ //Projectile hits goat
     throwable.alive = false;
-    
   }
+  background.sun();
   print(goat.life);
   healthbar.diaplay(mountaineer.life,goat.life); 
 }
