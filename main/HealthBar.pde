@@ -8,7 +8,7 @@ class HealthBar {
     this.mountaineer=mountaineer;
     this.goat=goat;
   }
-  void draw(){    //draw outline of two healthbars
+  void diaplay(){    //draw outline of two healthbars
     noFill();
     rect(0,0,Barwidth,Barwidth);
     rect(width-Barwidth,0,Barwidth,Barwidth);
