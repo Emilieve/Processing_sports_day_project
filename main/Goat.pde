@@ -3,7 +3,8 @@ class Goat {
   float xPosGoat = 0;
   float yPosGoat = 0;
   float goatSize = 0;
-  float goatSpeed = 2;
+  float goatSpeed = 5;
+  float chasePoint = 0;
   //booleans
   boolean goatHit = false;
   //ints
@@ -52,21 +53,22 @@ class Goat {
   }
 
   void moveNormal(float xPosChase) {
-
+    chasePoint = xPosChase;
     if (xPosGoat > xPosChase + 40 * goatSize) {
       xPosGoat = xPosGoat - goatSpeed;
     }
   }
   void moveBack() {
-    //    if (xPosGoat - 'number' * gS <= xposthrowable() && yposthrowable <= yPosGoat + 'number' * gS ) {
-    //    goatHit = true;
-    //    }
-    goatHit = true;
+    if (xPosGoat > chasePoint + 40 * goatSize) {
+      goatHit = true;
+    } else {
+      goatHit = false;
+    }
     if (goatHit == true) {
       xPosGoat = xPosGoat + 50 * goatSize;
     }
   }
-//
+  
   float getGoatLeft() {
     return xPosGoat - 60 * goatSize;
   }
