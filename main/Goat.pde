@@ -59,13 +59,14 @@ class Goat {
     }
   }
   void moveBack() {
-    if (xPosGoat > chasePoint + 40 * goatSize) {
-      goatHit = true;
-    } else {
-      goatHit = false;
-    }
+    goatHit = true;
+    //if (xPosGoat >= chasePoint + 40 * goatSize) {
+    //  goatHit = true;
+    //} else {
+    //  goatHit = false;
+    //}
     if (goatHit == true) {
-      xPosGoat = xPosGoat + 50 * goatSize;
+      xPosGoat = xPosGoat + 100 * goatSize;
     }
   }
   

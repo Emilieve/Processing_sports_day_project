@@ -29,15 +29,15 @@ class Structure {
       //mountaineer through rock
     } else if (input=='E'||input=='e') { 
         mountaineer.punch();
-        if (mountaineer.x+mountaineer.imageWidth/2>goat.getGoatLeft() ) {    //collision
-        
-        goat.life=-2;
-        goat.xPosGoat-=2;
-        if (goat.life<0) {
-          textSize(128);
-          fill(#f72a1b);
-          text("Goat dead", width/2, height/2);
-        }
+        if (mountaineer.topRightX>goat.getGoatLeft() ) {    //collision
+          goat.life-=2;
+          //goat.xPosGoat+=2;
+          goat.moveBack();
+          if (goat.life<0) {
+            textSize(128);
+            fill(#f72a1b);
+            text("Goat dead", width/2, height/2);
+          }
       } 
     }
     //if(mountaineer.x+mountaineer.imageWidth/2>=throwable.xpos ||mountaineer.x-mountaineer.imageWidth/2<=throwable.xpos){    //if close to rock through rock

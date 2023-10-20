@@ -23,12 +23,14 @@ void draw(){
   throwable.update();
   mountaineer.display();
   goat.display(mountaineer.topRightX);
-  healthbar.diaplay(100,100);    //mountaineer.life,goat.life)
+     //mountaineer.life,goat.life)
   structure.update();
   if(throwable.collision(goat.getGoatRight(), goat.getGoatLeft(), goat.getGoatY())){ //Projectile hits goat
     throwable.alive = false;
     
   }
+  print(goat.life);
+  healthbar.diaplay(mountaineer.life,goat.life); 
 }
 
 void keyPressed(){
