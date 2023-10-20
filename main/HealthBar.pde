@@ -15,7 +15,7 @@ class HealthBar {
     if(life > 80){    //still very health show green 
       fill(#35a639);
       rect(0,0,life*6,Barheight);
-    }else if(life>40 && life<80){    //show yellow
+    }else if(life>40){    //show yellow
       fill(#f2a949);
       rect(0,0,life*6,Barheight);
     }else{    //shou red
