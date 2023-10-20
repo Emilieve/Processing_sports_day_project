@@ -1,3 +1,4 @@
+PImage backgroundImage;
 Mountaineer mountaineer;
 Background background;
 Goat goat;
@@ -14,8 +15,9 @@ void setup(){
 }
 
 void draw(){
-  background(0,0,0);
+  background.display();
   throwable.display();
   throwable.update();
   mountaineer.display();
+  
 }
