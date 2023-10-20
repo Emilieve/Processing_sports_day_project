@@ -9,13 +9,14 @@ void setup(){
   fullScreen();
   mountaineer = new Mountaineer();
   background = new Background();
-  //goat = new Goat();
+  goat = new Goat(100,100,1.0);
   healthbar = new HealthBar(600,30);
   throwable = new Throwable(width*3/4, height*3/4, 100, false);
 }
 
 void draw(){
   background.display();
+  goat.display();
   throwable.display();
   throwable.update();
   mountaineer.display();

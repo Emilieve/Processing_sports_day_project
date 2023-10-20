@@ -10,12 +10,17 @@ class Mountaineer {
   Mountaineer(){
     imgNeutral = loadImage("../images/mountaineer_neutral.png");
     imgNeutral.resize(imageWidth,imageHeight);
-    //imgPunching = loadImage("../images/mountaineer_punching.png");
+    imgPunching = loadImage("../images/mountaineer_punch.png");
+    imgPunching.resize(imageWidth,imageHeight);
     this.x = xPosStart;
   }
   
   void display(){
-   image(imgNeutral, 0, height-520);
+   image(imgNeutral, this.x, height-imageHeight);
+  }
+  
+  void punch(){
+    
   }
   
 }
