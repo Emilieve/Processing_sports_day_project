@@ -12,6 +12,8 @@ class Mountaineer {
   int currentPunchFrameLength = 0;
   int moveIncrement = 10;
   int topRightX;
+  int life;
+
   
   
   Mountaineer(){
@@ -21,6 +23,7 @@ class Mountaineer {
     imgPunching.resize(imageWidth,imageHeight);
     this.x = xPosStart;
     this.topRightX = this.x + imageWidth;
+    this.life = 100;
   }
   
   void display(){
