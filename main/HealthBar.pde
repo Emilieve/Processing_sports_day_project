@@ -6,8 +6,8 @@ class HealthBar {
   }
   void diaplay(int mountaineerLife,int goatLife){    //draw outline of two healthbars
     noFill();
-    rect(0,0,Barwidth,Barwidth);
-    rect(width-Barwidth,0,Barwidth,Barwidth);
+    rect(0,0,Barwidth,Barheight);
+    rect(width-Barwidth,0,Barwidth,Barheight);
     MountaineerHealthBar(mountaineerLife);
     GoatHealthbar(goatLife);
   }
