@@ -30,9 +30,7 @@ void draw(){
     
   }
 }
-void mouseClicked(){
-  structure.mousePressEvent();
-}
+
 void keyPressed(){
   structure.keyPressEvent(key);
 }
