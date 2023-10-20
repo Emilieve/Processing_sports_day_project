@@ -10,10 +10,12 @@ void setup(){
   background = new Background();
   goat = new Goat();
   healthbar = new HealthBar();
-  throwable = new Throwable();
-  
+  throwable = new Throwable(width*3/4, height*3/4, 100, false);
 }
 
 void draw(){
+  background(0,0,0);
+  throwable.display();
+  throwable.update();
   mountaineer.display();
 }
