@@ -4,7 +4,6 @@ Background background;
 Goat goat;
 HealthBar healthbar;
 Throwable throwable;
-Structure structure;
 
 void setup(){
   fullScreen();
@@ -30,8 +29,6 @@ void draw(){
   }
 }
 void mouseClicked(){
-  structure.mousePressEvent();
 }
 void keyPressed(){
-  structure.keyPressEvent(key);
 }
