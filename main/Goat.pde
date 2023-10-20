@@ -7,6 +7,7 @@ class Goat {
   float chasePoint = 0;
   //booleans
   boolean goatHit = false;
+  boolean goatAttack = false;
   //ints
   int life = 100;
   int counter = 0;
@@ -60,16 +61,24 @@ class Goat {
   }
   void moveBack() {
     goatHit = true;
-    //if (xPosGoat >= chasePoint + 40 * goatSize) {
-    //  goatHit = true;
-    //} else {
-    //  goatHit = false;
-    //}
     if (goatHit == true) {
       xPosGoat = xPosGoat + 100 * goatSize;
     }
   }
-  
+
+  void attack() {
+      goatAttack = true;
+  }
+  void timer() {
+    counter++;
+    counter = counter %60;
+    if (counter >= 59) {
+      attack();
+    } if (counter < 59) {
+      goatAttack = false;
+    }
+  }
+
   float getGoatLeft() {
     return xPosGoat - 60 * goatSize;
   }
