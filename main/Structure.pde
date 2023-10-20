@@ -9,8 +9,9 @@ class Structure {
   }
 
   void update() {
-    if (mountaineer.topRightX>goat.getGoatLeft() && goat.goatAttack == true) {
+    if (mountaineer.topRightX<=goat.getGoatLeft() && goat.goatAttack == true) {
       mountaineer.life-=5;
+      mountaineer.topRightX-=5;
     }
     if (mountaineer.life<0) {
       textSize(128);
@@ -18,8 +19,7 @@ class Structure {
       text("mountaineer dead", 0, height/2);
     }
   }
-
-  
+ 
   void keyPressEvent(char input) {
     if (input=='A'||input=='a') {    //press A ora move left
       mountaineer.move("left");
@@ -36,12 +36,9 @@ class Structure {
           if (goat.life<0) {
             textSize(128);
             fill(#f72a1b);
-            text("Goat dead", width/2, height/2);
+            text("Goat dead",0, height/2);
           }
       } 
     }
-    //if(mountaineer.x+mountaineer.imageWidth/2>=throwable.xpos ||mountaineer.x-mountaineer.imageWidth/2<=throwable.xpos){    //if close to rock through rock
-
-    //}
   }
 }

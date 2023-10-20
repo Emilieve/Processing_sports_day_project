@@ -13,10 +13,10 @@ class HealthBar {
     GoatHealthbar(goatLife);
   }
   void MountaineerHealthBar(int life){    //draw healthbar of Mountaineer
-    if(life > 80){    //still very health show green 
+    if(life >= 80){    //still very health show green 
       fill(#35a639);
       rect(0,0,life*6,Barheight);
-    }else if(life>40){    //show yellow
+    }else if(life>=40){    //show yellow
       fill(#f2a949);
       rect(0,0,life*6,Barheight);
     }else{    //shou red
@@ -25,10 +25,10 @@ class HealthBar {
     }
   }
   void GoatHealthbar(int life){
-    if(life > 80){    //still very health show green 
+    if(life >= 80){    //still very health show green 
       fill(#35a639);
       rect(width-Barwidth,0,life*6,Barheight);
-    }else if(life>40 && life<80){    //with yellow
+    }else if(life>=40 && life<80){    //with yellow
       fill(#f2a949);
       rect(width-Barwidth,0,life*6,Barheight);
     }else{    //with red
