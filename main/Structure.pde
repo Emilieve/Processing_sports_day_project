@@ -1,4 +1,4 @@
-class Structure{
+class Structure {
   Mountaineer mountaineer;
   Goat goat;
   Throwable throwable;
