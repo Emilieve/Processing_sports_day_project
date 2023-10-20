@@ -10,6 +10,9 @@ class Mountaineer {
   int imageHeight = 350;
   int holdPunchFrameLenght = 3;
   int currentPunchFrameLength = 0;
+  int moveIncrement = 10;
+  int topRightX;
+  
   
   Mountaineer(){
     imgNeutral = loadImage("../images/mountaineer_neutral.png");
@@ -17,6 +20,7 @@ class Mountaineer {
     imgPunching = loadImage("../images/mountaineer_punch.png");
     imgPunching.resize(imageWidth,imageHeight);
     this.x = xPosStart;
+    this.topRightX = this.x + imageWidth;
   }
   
   void display(){
@@ -32,6 +36,8 @@ class Mountaineer {
      imageToDisplay = imgNeutral;
    }
    image(imageToDisplay, this.x, height-imageHeight);
+   
+   circle (this.topRightX, height-imageHeight, 10);
   }
   
   void punch(){
@@ -41,13 +47,11 @@ class Mountaineer {
   
   void move(String direction){
     if (direction == "right"){
-      this.x += 10;
+      this.x += moveIncrement;
     }
     if (direction == "left"){
-      this.x -= 10;
+      this.x -= moveIncrement;
     }
-    
-    
   }
   
 }
