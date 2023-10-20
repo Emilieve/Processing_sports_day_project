@@ -7,7 +7,7 @@ class Structure {
     this.goat=goat;
     this.throwable=throwable;
   }
-  void deislay(){
+  void update(){
     if(mountaineer.x+mountaineer.imageWidth/2+15>goat.getGoatLeft){
       mountaineer.life-=5;
     }

@@ -23,14 +23,11 @@ void draw(){
   throwable.update();
   mountaineer.display();
   healthbar.diaplay(mountaineer.life,goat.life);    //mountaineer.life,goat.life)
+  structure.update();
 }
 void mouseClicked(){
   structure.mousePressEvent();
 }
 void keyPressed(){
   structure.keyPressEvent(key);
-}
-
-void collisionCheck(){
-  
 }

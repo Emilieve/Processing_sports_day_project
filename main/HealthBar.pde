@@ -34,7 +34,5 @@ class HealthBar {
       fill(#eb4034);
       rect(width-Barwidth,0,life*6,Barheight);
     }
-  }
-  
-  
+  } 
 }
