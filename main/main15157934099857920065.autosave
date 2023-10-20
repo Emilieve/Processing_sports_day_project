@@ -1,0 +1,21 @@
+PImage backgroundImage;
+Mountaineer mountaineer;
+Background background;
+Goat goat;
+HealthBar healthbar;
+Throwable throwable;
+void setup(){
+  size(1280,720);
+  mountaineer = new Mountaineer();
+  background = new Background();
+  goat = new Goat();
+  healthbar = new HealthBar(600,20,mountaineer,goat);
+  throwable = new Throwable();
+  background = new Background();
+  
+}
+
+void draw(){
+  background.display();
+  mountaineer.display();
+}
