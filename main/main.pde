@@ -23,14 +23,11 @@ void draw(){
   throwable.update();
   mountaineer.display();
   healthbar.diaplay(100,100);    //mountaineer.life,goat.life)
-<<<<<<< Updated upstream
   structure.update();
-=======
-  if(collision(goat.getGoatRight(), goat.getGoatLeft(), getGoatY())){ //Projectile hits goat
+  if(throwable.collision(goat.getGoatRight(), goat.getGoatLeft(), goat.getGoatY())){ //Projectile hits goat
     throwable.alive = false;
     
   }
->>>>>>> Stashed changes
 }
 void mouseClicked(){
   structure.mousePressEvent();

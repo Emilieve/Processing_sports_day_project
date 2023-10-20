@@ -74,11 +74,7 @@ class Goat {
     return yPosGoat - 20 * goatSize;
   }
   float getGoatRight() {
-<<<<<<< Updated upstream
     return xPosGoat + 150 * goatSize;
-=======
-   return xPosGoat + 150 * goatSize;
->>>>>>> Stashed changes
   }
   int getLives() {
     return life;
